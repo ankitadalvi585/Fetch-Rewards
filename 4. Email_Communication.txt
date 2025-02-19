@@ -1,0 +1,17 @@
+Hi Team,
+
+I hope you're doing well. I have conducted an initial review of the Fetch Rewards data files (receipts, brands, users) and identified several data quality issues that could impact analysis and reporting. Below is a summary of the key findings along with some questions to ensure data accuracy.
+
+Key Data Quality Issues Identified:
+1. Duplicate Records in Users Table: I observed duplicate records for the same user in users table. Those were removed before importing the data into the database. Could you please clarify why this is happening? Also, would you like validation rules implemented to prevent future duplicates?
+2. Missing Brand Codes: Many receipt item lists had Brand codes that were not present in the Brands table. This might affect the aggregation(joins) when performing analysis by brand. Should we expect these to be added, or is there a separate process to handle this?
+3. Sparse Columns in Reward Receipt Items List: Over 80% of the data in ~20 columns is NULL. Are those beneficial for analysis or we can consider dropping these columns?
+4. NULL Values in Boolean Columns – Boolean fields such as 'needsFetchReview', 'userFlaggedNewItem', and 'competitiveProduct' in 'RewardReceiptItemList' contain NULL values. Should we treat NULLs as False or is there a different approach you would recommend for handling these NULL values?
+
+In addition to these points, I have discovered some data consistency and redundancy issues which we can talk about and clarify. 
+Lastly, considering the production environment, do you anticipate any performance or scaling concerns? If so, we can explore indexing, partitioning, or other optimization strategies.
+
+I look forward to discussing these observations with you and scheduling some time to go over them in more detail. 
+
+Best Regards,
+Ankita
