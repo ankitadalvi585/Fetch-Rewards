@@ -12,6 +12,7 @@ WHERE rewardsReceiptStatus in ('FINISHED', 'REJECTED')
 GROUP BY rewardsReceiptStatus
 ORDER BY AVG(totalSpent) DESC;
 
+-- Result: Average Spend is greater for 'Accepted' ('Finished') rewardReceiptStatus.
 
 
 -- Question 2:
@@ -26,6 +27,7 @@ WHERE rewardsReceiptStatus in ('FINISHED', 'REJECTED')
 GROUP BY rewardsReceiptStatus
 ORDER BY sum(purchasedItemCount) DESC;
 
+-- Result: Total number of items purchased is greater for 'Accepted' ('Finished') rewardReceiptStatus.
 
 
 -- Question 3:
@@ -52,6 +54,7 @@ SELECT top 1 *
 FROM ReceiptTotals
 ORDER BY summedTotalSpent DESC;
 
+-- Result: BEN AND JERRY'S brand has the most spend among users who were created within the past 6 months
 
 
 -- Question 4:
@@ -79,6 +82,8 @@ WITH ReceiptCount AS (
 SELECT top 1 *
 FROM ReceiptCount
 ORDER BY transactionCount DESC;
+
+--Result: HY-VEE brand has the most transactions among users who were created within the past 6 months
 
 
 
