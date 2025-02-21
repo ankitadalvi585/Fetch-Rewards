@@ -124,7 +124,7 @@ Identified Data Quality issues as mentioned below. Detailed Analysis are present
 1. JSON Files: Date format in json files is in epoch time format (Unix Time stamp) which needed additional processing.
 2. Found brandcodes in RewardReceiptItems table which are not present in brands table and vice versa. Considering Brands as the dimension table, all of the brandcodes in RewardReceiptItems table should be present in Brands table. Significant amount of data will be missing when we query between Brands & RewardReceiptItems tables using joins.
 3. Duplicate records in the Users table.
-4. Data Consistency issues for categorical (text) columns.
+4. Data standardization issues for categorical (text) columns.
 
 
 ### Qs 4. Fourth: Communicate with Stakeholders
@@ -149,7 +149,7 @@ Constructed the email below to be sent to stakeholder/ and have mentioned it in 
 
     4. Duplicate Records in Users Table: I observed duplicate records for the same user in users table. Those were removed before importing the data into the database. Could you please clarify why this is happening? Also, would you like validation rules implemented to prevent future duplicates?
 
-    In addition to these points, I have discovered some data consistency and redundancy issues which we can talk about and clarify. 
+    In addition to these points, I have discovered some data standardization and redundancy issues which we can talk about and clarify. 
     Lastly, considering the production environment, do you anticipate any performance or scaling concerns? If so, we can explore indexing, partitioning, or other optimization strategies.
 
     I look forward to discussing these observations with you and scheduling some time to go over them in more detail. 
