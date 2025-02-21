@@ -28,7 +28,7 @@ on ri.brandCode = b.brandcode;
 
 --	  For example: 
 --    a. name and brandCode columns in Brands table have somewhat similar data (differs in case). Also, brandcode contains more Null values as compared to name column. .
---       createdDate & dateScanned and finishedDate & modifyDate in Receipts table have somewhat same data. Can we drop one?
+--       createdDate & dateScanned and finishedDate & modifyDate in Receipts table have somewhat same data.
 
 Select name, brandcode from Brands;
 Select createDate, dateScanned from Receipts;
@@ -40,7 +40,7 @@ Select finishedDate, modifyDate from Receipts;
 Select distinct category, categoryCode from Brands;
 Select distinct name, brandCode from Brands;
 
---    c. The ReceiptItemsList table contains approximately 20 columns, with over 80% of the data in these columns being NULL. Can we drop them?
+--    c. The ReceiptItemsList table contains approximately 20 columns, with over 80% of the data in these columns being NULL. Since these are mostly NULL, would like to understand the purpose of these columns where are they used?
 --    d. Some boolean columns have NULL values.
 --       > needsFetchReview,userFlaggedNewItem,competitiveProduct in RewardReceiptItems 
 --       > topBrand from Brands
