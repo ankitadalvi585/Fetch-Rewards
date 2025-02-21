@@ -27,7 +27,7 @@ on ri.brandCode = b.brandcode;
 -- 4. Data Consistency issues for categorical (text) columns.
 
 --	  For example: 
---    a. name and brandCode columns in Brands table have somewhat similar data (differs in case). Also, brandcode contains more Null values as compared to name column. .
+--    a. name and brandCode columns in Brands table have somewhat similar data (differs in case). Also, brandcode contains more Null values as compared to name column.
 --       createdDate & dateScanned and finishedDate & modifyDate in Receipts table have somewhat same data.
 
 Select name, brandcode from Brands;
