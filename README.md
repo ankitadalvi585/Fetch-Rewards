@@ -24,7 +24,7 @@ Structured Relational Data model for JSON files provided is as below:
 
 Created Receipts, RewardReceiptItemList, Brands, Users table in SQL Server Management Studio by importing the flat files (CSV's) and executed queries in the 'FetchRewardsAssessment.sql' to obtain answers to the questions asked. 
 
-Refer [FetchRewardsAssessment.sql](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/2.%20FetchRewardsAssessment.sql) file for explanation of the queries developed for the below questions.
+**Refer [FetchRewardsAssessment.sql](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/2.%20FetchRewardsAssessment.sql) file for explanation of the queries developed for the below questions.**
 
 Questions: 
 
