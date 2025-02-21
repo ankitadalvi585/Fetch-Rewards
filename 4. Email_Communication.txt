@@ -1,19 +1,41 @@
 Hi Team,
 
-I hope you're doing well. I have conducted an initial review of the Fetch Rewards data files (receipts, brands, users) and identified several data quality issues that could impact analysis and reporting. Below is a summary of the key findings along with some questions to ensure data accuracy.
+I hope you're doing well. I have conducted an initial review of the Fetch Rewards data files (receipts, brands, users) and identified several data quality issues that could impact analysis and reporting. I have below questions/concerns about the data provided.
 
-Key Data Quality Issues Identified:
+Questions about the data:
 
-1. Missing Brand Codes: Many receipt item lists had Brand codes that were not present in the Brands table. This might affect the aggregation(joins) when performing analysis by brand. Should we expect these to be added, or is there a separate process to handle this?
+1. Why is the date stored in epoch format instead of a standard date format?
+2. Why are some brand codes missing in the Brands table but present in RewardReceiptItemList?
+3. Are the duplicate records in the Users table removed correctly, and do they impact reporting?
+4. What is the purpose of columns in RewardReceiptItemList that are mostly NULL?
+5. Can we standardize category and category codes to avoid inconsistencies?
+6. Why do some Boolean columns have empty (NULL) values instead of True/False?
+7. Should barcode data in RewardReceiptItemList be stored as text or another format?
 
-2. Sparse Columns in Reward Receipt Items List: Over 80% of the data in ~20 columns is NULL. Since these are mostly NULL, would like to understand the purpose of these columns where are they used?
+I found these data quality issues by running queries to compare the data across tables, identifying inconsistencies in text fields, checking for null values and duplicates before importing the data, analyzing column completeness and reviewing the formats of the data provided.
 
-3. NULL Values in Boolean Columns – Boolean fields such as 'needsFetchReview', 'userFlaggedNewItem', and 'competitiveProduct' in 'RewardReceiptItemList' contain NULL values. Can we treat NULLs as False or is there a different approach you would recommend for handling these NULL values?
+I need below clarifications regarding the data to handle the data quality issues above:
 
-4. Duplicate Records in Users Table: I observed duplicate records for the same user in users table. Those were removed before importing the data into the database. Could you please clarify why this is happening? Also, would you like validation rules implemented to prevent future duplicates?
+1. What is the expected format for date fields?
+2. Should missing brand codes be added, or do they indicate errors in data entry?
+3. What is the business rule for handling NULL values in Boolean and Categorical columns?
+4. Would you like any validation rules to be implemented to prevent future duplicates in Users table?
+5. Over 80% of the data in ~20 columns in RewardReceiptItemList is NULL. Since these are mostly empty, would like to understand the purpose of these columns where are they used?
+6. Around 82 records have 'text' values similar to B076FJ92M4 in the barcode column in RewardReceiptItemList table whereas rest of them are numeric. What is the reason for this difference?
 
-In addition to these points, I have discovered some data standardization and redundancy issues which we can talk about and clarify. 
-Lastly, considering the production environment, do you anticipate any performance or scaling concerns? If so, we can explore indexing, partitioning, or other optimization strategies.
+Other information needed to optimize the data:
+
+1. Business logic on how categories, brand codes, and missing values should be handled.
+2. Expected relationships between tables.
+3. Information about which columns with empty (NULL) values are actually required for reporting and which ones can be dropped.
+4. Documentation on how data should be validated. For example, Date formats, Barcode format, Brand Codes, Category Standardization, NULL handling. 
+
+Also, I anticipate below performance and scaling concerns in production:
+
+1. Missing and inconsistent data across tables might affect the accuracy of data analysis.
+>  To address this, we can implement data validation rules, make sure related data matches correctly across tables, and clean the data before processing. 
+2. As data grows, large datasets could lead to slower query performance.
+>  To address this, we can optimize queries, ensure proper indexing and other database optimization techniques to improve scalability.
 
 I look forward to discussing these observations with you and scheduling some time to go over them in more detail. 
 
