@@ -12,7 +12,7 @@ Key Data Quality Issues Identified:
 
 4. Duplicate Records in Users Table: I observed duplicate records for the same user in users table. Those were removed before importing the data into the database. Could you please clarify why this is happening? Also, would you like validation rules implemented to prevent future duplicates?
 
-In addition to these points, I have discovered some data consistency and redundancy issues which we can talk about and clarify. 
+In addition to these points, I have discovered some data standardization and redundancy issues which we can talk about and clarify. 
 Lastly, considering the production environment, do you anticipate any performance or scaling concerns? If so, we can explore indexing, partitioning, or other optimization strategies.
 
 I look forward to discussing these observations with you and scheduling some time to go over them in more detail. 
