@@ -124,7 +124,7 @@ Identified Data Quality issues as mentioned below. Detailed Analysis are present
 1. JSON Files: Date format in json files is in epoch time format (Unix Time stamp) which needed additional processing.
 2. Found brandcodes in RewardReceiptItems table which are not present in brands table and vice versa. Considering Brands as the dimension table, all of the brandcodes in RewardReceiptItems table should be present in Brands table. Significant amount of data will be missing when we query between Brands & RewardReceiptItems tables using joins.
 3. Duplicate records in the Users table.
-4. Data standardization issues for categorical (text) columns.
+4. Data completeness and standardization issues for categorical (text) columns.
 
 
 ### Qs 4. Fourth: Communicate with Stakeholders
