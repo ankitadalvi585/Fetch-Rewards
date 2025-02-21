@@ -24,7 +24,7 @@ on ri.brandCode = b.brandcode;
 
 -- 3. Duplicate records in the Users table were removed before importing data from csv into SQL Server.
 
--- 4. Data Consistency issues for categorical (text) columns.
+-- 4. Data Completeness and Standardization issues for categorical (text) columns.
 
 --	  For example: 
 --    a. name and brandCode columns in Brands table have somewhat similar data (differs in case). Also, brandcode contains more Null values as compared to name column.
@@ -35,7 +35,7 @@ Select createDate, dateScanned from Receipts;
 Select finishedDate, modifyDate from Receipts;
 
 --	  b. In category & categoryCode columns we can merge categories if possible like Dairy - Dairy & Refrigerated, Beauty - Beauty & Personal Care. 
---	     We can make the data consistent in both columns by changing the case and can fill NULL values in categoryCode by referencing data in category column in Brands table.
+--	     We can standardize the data in both columns by changing the case and can fill NULL values in categoryCode by referencing data in category column in Brands table.
 
 Select distinct category, categoryCode from Brands;
 Select distinct name, brandCode from Brands;
