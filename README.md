@@ -6,10 +6,16 @@
 
 > Attachments to refer:                               
     [FetchRewardsAssessment.pynb](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/FetchRewardsAssessment.ipynb)                                       
-    [FetchRewardsAssessment.drawio](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/1.%20FetchRewardsAssessment.drawio)                                     
+    [FetchRewardsAssessment.drawio](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/1.%20FetchRewardsAssessment.drawio)                      
     [JSON Files](https://github.com/ankitadalvi585/Fetch-Rewards/blob/main/JSONFiles_FetchRewardsAssessment.zip)
 
 Run the FetchRewardsAssessment.pynb file to extract data from json files and convert it into respective dataframes/CSV's
+
+**Steps to run pynb file:**
+	
+ 	1. Open the pynb file in Jupyter Notebook.
+	2. Make sure the JSON files are in the same folder as the pynb file. If not, you can change the path to the json files in the code.
+	3. Place the cursor on the code cell or markdown and click on 'Run' option in the tool bar or press Shift+Enter. This will execute the code or markdown text in that particular cell.
 
 Open the FetchRewardsAssessment.drawio file for the relational data model created as per my understanding of the data (Screenshot for the same attached below).
 
