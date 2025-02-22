@@ -49,3 +49,5 @@ Select needsFetchReview,userFlaggedNewItem,competitiveProduct from RewardReceipt
 Select topbrand from Brands;
 
 --    e. Some Barcodes(82) in RewardReceiptItems table are in text format.
+
+Select barcode from RewardReceiptItemList order by barcode desc;
